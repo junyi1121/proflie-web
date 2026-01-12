@@ -2,73 +2,71 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>나의 취미</title>
-  <!-- ⚠️ 상위 폴더에 있는 css 연결 -->
-  <link rel="stylesheet" href="../style.css" />
+  <title>수강 과목</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- 🔹 헤더 -->
+  <!-- 🔹 고정 헤더 -->
   <header class="header">
     <div class="logo">My Web</div>
     <nav>
-      <a href="../index.html">Home</a>
-      <a href="../page1/" class="active">수강 과목</a>
-      <a href="../page2/">2026 목표</a>
-      <a href="../page3/">소희</a>
-      <a href="../page4/">대전여행 후기</a>
+      <a href="index.html">Home</a>
+      <a href="page1.html" class="active">수강 과목</a>
+      <a href="page2.html">2026 목표</a>
+      <a href="page3.html">소희</a>
+      <a href="page4.html">대전여행 후기</a>
     </nav>
   </header>
 
   <!-- 🔹 메인 -->
-  <main class="container">
+  <main class="container page">
     <section class="intro">
-      <h1>나의 취미 🎵💃</h1>
-      <p>제가 좋아하고 즐겨 하는 것들을 소개합니다!</p>
+      <h1>📚 수강 과목</h1>
+      <p>2026년 현재 수강 중인 전공 및 관심 과목입니다</p>
     </section>
 
-    <!-- 🎹 취미 1 -->
-    <section class="profile">
-      <img src="../images/piano.jpg" alt="피아노 치기">
-      <div>
-        <h2>피아노 치기 🎹</h2>
+    <!-- 과목 카드 1 -->
+    <section class="subject-card">
+      <img src="images/subject1.jpg" alt="웹프로그래밍">
+      <div class="subject-text">
+        <h2>웹 프로그래밍</h2>
         <p>
-          어릴 때부터 피아노를 치는 것을 좋아했고,  
-          지금은 교회에서 반주도 하고 있어요.
+          HTML, CSS, JavaScript를 활용해  
+          웹 페이지를 직접 구현하는 과목입니다.
         </p>
       </div>
     </section>
 
-    <!-- 💃 취미 2 -->
-    <section class="profile">
-      <img src="../images/dance.jpg" alt="춤추기">
-      <div>
-        <h2>춤추기 💃</h2>
+    <!-- 과목 카드 2 -->
+    <section class="subject-card">
+      <img src="images/subject2.jpg" alt="자료구조">
+      <div class="subject-text">
+        <h2>자료구조</h2>
         <p>
-          K-POP 안무를 따라 추는 걸 좋아해요!  
-          취미이자 제일 자신 있는 장기입니다 😊
+          배열, 스택, 큐, 트리 등의  
+          자료 구조를 배우는 핵심 전공 과목입니다.
         </p>
       </div>
     </section>
 
-    <!-- ☕ 취미 3 -->
-    <section class="profile">
-      <img src="../images/cafe.jpg" alt="카페에서 책 읽기">
-      <div>
-        <h2>카페에서 책 읽기 ☕📖</h2>
+    <!-- 과목 카드 3 -->
+    <section class="subject-card">
+      <img src="images/subject3.jpg" alt="인공지능 개론">
+      <div class="subject-text">
+        <h2>인공지능 개론</h2>
         <p>
-          조용한 카페에 가서 혼자 책 읽는 시간을 좋아해요.  
-          마음이 차분해지는 힐링 시간입니다.
+          머신러닝과 인공지능의 기본 개념을  
+          이해하는 기초 과목입니다.
         </p>
       </div>
     </section>
+
   </main>
 
   <!-- 🔹 푸터 -->
   <footer class="footer">
     <p>© 2026 Junyi. All rights reserved.</p>
-    <p>Email: qkrwnsdl930309@naver.com</p>
-    <p>instagram: @_2unyi</p>
   </footer>
 
 </body>
