@@ -170,6 +170,7 @@ nav a.active {
   background: #fafafa;
 }
 
+/*2026 목표 박스*/
 .goal-box {
   width: 60%;
   margin: 40px auto;
@@ -188,6 +189,122 @@ nav a.active {
   font-weight: 400;
 }
 
+/* =========================
+   page3 : 라이즈 소희
+========================= */
+
+/* =========================
+ 소희 메인 이미지
+========================= */
+.sohee-main-img {
+  width: 180px;
+  display: block;
+  margin: 15px auto 5px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+.img-caption {
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+
+/* 위키 박스 (기본 정보 / 특징) */
+.wiki-box {
+  margin-top: 35px;
+}
+
+.wiki-box h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #4f46e5;
+  border-left: 4px solid #c7d2fe;
+  padding-left: 10px;
+}
+
+/* =========================
+   위키 스타일 테이블
+========================= */
+.wiki-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.wiki-table th,
+.wiki-table td {
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+/* 왼쪽 항목 이름 */
+.wiki-table th {
+  width: 110px;
+  background: #f8fafc;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* 사인 이미지 */
+.wiki-table img {
+  width: 140px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* =========================
+   특징 / 덕질 리스트
+========================= */
+.wiki-box ul {
+  padding-left: 18px;
+}
+
+.wiki-box li {
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+/* =========================
+   내가 좋아하는 소희
+========================= */
+.my-style {
+  margin-top: 40px;
+  padding: 20px;
+  background: #fdf2f8;
+  border-radius: 16px;
+}
+
+.my-style h3 {
+  font-size: 17px;
+  color: #db2777;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.my-style ul {
+  padding-left: 18px;
+}
+
+.my-style li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* 유튜브 링크 */
+.my-style a {
+  margin-left: 6px;
+  font-size: 13px;
+  color: #db2777;
+  text-decoration: none;
+}
+
+.my-style a:hover {
+  text-decoration: underline;
+}
 
 
 /* 🔹 푸터 */
