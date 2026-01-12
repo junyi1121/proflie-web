@@ -170,6 +170,25 @@ nav a.active {
   background: #fafafa;
 }
 
+.goal-box {
+  width: 60%;
+  margin: 40px auto;
+  padding: 25px;
+  border: 1px solid #aaa;
+  background: white;
+}
+
+.goal-box ul {
+  padding-left: 20px;   /* 점과 글 간격 */
+}
+
+.goal-box li {
+  text-align: left;     /* 글씨 왼쪽 정렬 */
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+
 
 /* 🔹 푸터 */
 .footer {
