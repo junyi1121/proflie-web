@@ -126,6 +126,71 @@ nav a.active {
   text-decoration: underline;
 }
 
+/* ======================
+   수강과목 테이블 스타일
+====================== */
+
+.subject-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  font-size: 14px;
+}
+
+/* 테이블 헤더 */
+.subject-table th {
+  background: linear-gradient(135deg, #fbcfe8, #e0e7ff);
+  color: #333;
+  padding: 14px 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* 테이블 데이터 */
+.subject-table td {
+  padding: 12px 10px;
+  text-align: center;
+  color: #444;
+}
+
+/* 줄무늬 효과 */
+.subject-table tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.subject-table tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+/* hover 효과 */
+.subject-table tr:hover {
+  background: #fdf2f8;
+  transition: background 0.2s ease;
+}
+
+/* 과목명만 강조 */
+.subject-table td:nth-child(4) {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* 반응형 (모바일) */
+@media (max-width: 768px) {
+  .subject-table {
+    font-size: 12px;
+  }
+
+  .subject-table th,
+  .subject-table td {
+    padding: 8px 4px;
+  }
+}
+
+
 /* 🔹 푸터 */
 .footer {
   text-align: center;
