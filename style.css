@@ -2,129 +2,122 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
+  font-family: "Pretendard", Arial, sans-serif;
 }
 
-/* 🌸 배경 */
+/* 🌈 배경 */
 body {
-  background: linear-gradient(180deg, #fff7f0, #fefefe);
-  color: #4b3b2f;
+  background: linear-gradient(135deg, #dbeafe, #fce7f3);
+  min-height: 100vh;
+  color: #333;
 }
 
-/* 🌷 고정 헤더 */
+/* 🔹 고정 헤더 */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 65px;
-  background: #f6c1a1;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
+  padding: 0 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
   z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .logo {
-  font-size: 22px;
   font-weight: 700;
-  color: #4b2e21;
+  font-size: 20px;
+  color: #4f46e5;
 }
 
 nav a {
-  margin-left: 22px;
+  margin-left: 20px;
   text-decoration: none;
   font-size: 14px;
-  color: #6b3f2c;
+  color: #555;
   position: relative;
-  transition: all 0.3s ease;
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0;
-  height: 2px;
-  background: #b45309;
-  transition: width 0.3s ease;
+nav a:hover,
+nav a.active {
+  color: #4f46e5;
+  font-weight: 600;
 }
 
-nav a:hover::after,
-nav a.active::after {
-  width: 100%;
-}
-
-/* 🌼 메인 컨텐츠 카드 */
+/* 🔹 메인 카드 */
 .container {
-  max-width: 880px;
-  margin: 110px auto 60px;
-  background: #fffaf6;
-  padding: 45px;
-  border-radius: 25px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  max-width: 500px;
+  background: white;
+  margin: 120px auto 60px;
+  padding: 35px;
+  border-radius: 22px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-/* 🌸 인트로 */
+/* 🔹 인트로 */
 .intro {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .intro h1 {
-  font-size: 32px;
-  color: #b45309;
-  margin-bottom: 12px;
+  font-size: 26px;
+  color: #4f46e5;
+  margin-bottom: 8px;
 }
 
 .intro p {
-  font-size: 16px;
-  color: #6b4a3a;
+  font-size: 14px;
+  color: #666;
 }
 
-/* 🌷 프로필 */
+/* 🔹 프로필 */
 .profile {
   display: flex;
   align-items: center;
-  gap: 30px;
-  margin-bottom: 40px;
+  gap: 18px;
+  margin-bottom: 25px;
 }
 
 .profile img {
-  width: 140px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  border: 6px solid #f6c1a1;
+  object-fit: cover;
+  border: 4px solid #c7d2fe;
 }
 
 .profile ul {
   list-style: none;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .profile li {
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
-/* 🌼 소개 섹션 */
+/* 🔹 소개 영역 */
 .about h2 {
-  font-size: 20px;
-  color: #b45309;
-  margin-top: 25px;
-  margin-bottom: 8px;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #4f46e5;
 }
 
 .about p {
-  line-height: 1.8;
-  font-size: 15px;
-  color: #5a4336;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
 }
 
-/* 🌸 링크 */
+/* 🔹 링크 */
 .about a {
-  color: #b45309;
+  color: #4f46e5;
   font-weight: 600;
   text-decoration: none;
 }
@@ -133,15 +126,10 @@ nav a.active::after {
   text-decoration: underline;
 }
 
-/* 🌷 푸터 */
+/* 🔹 푸터 */
 .footer {
-  background: #f6c1a1;
   text-align: center;
-  padding: 25px;
+  padding: 20px;
   font-size: 13px;
-  color: #4b2e21;
-}
-
-.footer p {
-  margin: 5px 0;
+  color: #555;
 }
