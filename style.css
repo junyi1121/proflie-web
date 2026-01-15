@@ -9,13 +9,78 @@
 }
 
 /* =========================
-   전체 배경 (화이트 + 블루)
+   전체 배경 (연한 파스텔)
 ========================= */
 body {
-  background: linear-gradient(135deg, #eaf2ff, #f8fafc);
+  background: linear-gradient(135deg, #f1f5ff, #fafcff);
   min-height: 100vh;
   color: #333;
 }
+
+/* =========================
+   메인 베너
+========================= */
+.banner {
+  position: relative;
+  height: 180px;
+  border-radius: 26px;
+  background: linear-gradient(
+    135deg,
+    #4f46e5,
+    #60a5fa
+  );
+  margin-bottom: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0 20px 40px rgba(79,70,229,0.35);
+}
+
+/* 장식 원 */
+.banner::before,
+.banner::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.25;
+}
+
+.banner::before {
+  width: 200px;
+  height: 200px;
+  background: white;
+  top: -80px;
+  right: -60px;
+}
+
+.banner::after {
+  width: 140px;
+  height: 140px;
+  background: white;
+  bottom: -50px;
+  left: -40px;
+}
+
+/* 텍스트 */
+.banner-text {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.banner-text h1 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
+.banner-text p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
 
 /* =========================
    고정 헤더
@@ -39,98 +104,170 @@ body {
 .logo {
   font-weight: 700;
   font-size: 20px;
-  color: #1e179e;
+  color: #4f46e5;
 }
 
 nav a {
   margin-left: 20px;
   text-decoration: none;
   font-size: 14px;
-  color: #555;
+  color: #666;
 }
 
 nav a:hover,
 nav a.active {
-  color: #1e179e;
+  color: #4f46e5;
   font-weight: 600;
 }
 
 /* =========================
-   메인 카드 (가운데 흰 박스)
+   메인 카드
 ========================= */
 .container {
-  max-width: 720px;          /* ← 넓게 */
-  background: #ffffff;
+  max-width: 760px;
+  background: linear-gradient(180deg, #ffffff, #f8faff);
   margin: 120px auto 60px;
-  padding: 40px;
-  border-radius: 22px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  padding: 48px 42px;
+  border-radius: 28px;
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.14),
+    0 10px 25px rgba(79, 70, 229, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 배경 장식 원 */
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.container::before {
+  width: 220px;
+  height: 220px;
+  background: #e0e7ff;
+  top: -60px;
+  left: -60px;
+}
+
+.container::after {
+  width: 180px;
+  height: 180px;
+  background: #eef2ff;
+  bottom: -50px;
+  right: -50px;
 }
 
 /* =========================
-   인트로 영역
+   인트로
 ========================= */
 .intro {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
 }
 
 .intro h1 {
-  font-size: 26px;
-  color: #1e179e;
+  font-size: 34px;
+  font-weight: 900;
+  color: #4f46e5;
   margin-bottom: 8px;
+  letter-spacing: -0.6px;
 }
 
 .intro p {
-  font-size: 14px;
-  color: #666;
+  font-size: 15px;
+  color: #6b7280;
 }
 
 /* =========================
-   프로필 (메인 페이지)
+   프로필 카드
 ========================= */
 .profile {
-  display: flex;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 28px;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 30px;
+  background: white;
+  padding: 26px 30px;
+  border-radius: 22px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 36px;
+  transition: transform 0.3s ease;
 }
 
+.profile:hover {
+  transform: translateY(-6px);
+}
+
+/* 프로필 이미지 */
 .profile img {
-  width: 110px;
-  height: 110px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #c7d2fe;
+  border: 5px solid #e0e7ff;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
 }
 
+/* 프로필 텍스트 */
 .profile ul {
   list-style: none;
   font-size: 14px;
 }
 
 .profile li {
-  margin-bottom: 6px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #374151;
+  position: relative;
+  padding-left: 16px;
+}
+
+/* 포인트 바 */
+.profile li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background: #6366f1;
+  border-radius: 50%;
 }
 
 /* =========================
    소개 영역
 ========================= */
+.about {
+  background: rgba(255,255,255,0.9);
+  padding: 26px 30px;
+  border-radius: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+}
+
 .about h2 {
-  margin-top: 20px;
-  margin-bottom: 8px;
-  font-size: 16px;
-  color: #1e179e;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #4f46e5;
 }
 
 .about p {
-  font-size: 14px;
-  color: #444;
-  line-height: 1.6;
+  font-size: 15px;
+  color: #374151;
+  line-height: 1.8;
 }
 
 .about a {
-  color: #1e179e;
+  color: #4f46e5;
   font-weight: 600;
   text-decoration: none;
 }
@@ -138,6 +275,7 @@ nav a.active {
 .about a:hover {
   text-decoration: underline;
 }
+
 
 /* =========================
    수강과목 테이블
@@ -153,12 +291,12 @@ nav a.active {
 .subject-table,
 .subject-table th,
 .subject-table td {
-  border: 1px solid #c7d2fe;
+  border: 1px solid #e5e7eb;
 }
 
 .subject-table th {
   font-weight: 700;
-  background: #eef2ff;
+  background: #f5f7ff;
   padding: 10px;
 }
 
@@ -168,76 +306,122 @@ nav a.active {
   text-align: center;
 }
 
-.subject-table tr {
-  height: 42px;
-}
-
 .subject-table tr:hover td {
-  background: #f8fafc;
+  background: #fafafa;
 }
 
 /* =========================
-   2026 목표 박스
+   🎯 2026 목표 페이지
 ========================= */
+
+/* 전체 페이지 살짝 넓게 */
+.page {
+  max-width: 900px;
+}
+
+/* 목표 카드 공통 */
 .goal-box {
-  width: 70%;
-  margin: 40px auto;
-  padding: 28px 32px;
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-  border-left: 6px solid #1e179e;
+  position: relative;
+  width: 80%;
+  margin: 50px auto;
+  padding: 35px 40px;
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #f8fafc
+  );
+  border-radius: 24px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.12),
+    0 5px 15px rgba(79, 70, 229, 0.1);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* 위에 장식 바 */
+.goal-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    #4f46e5,
+    #60a5fa
+  );
+}
+
+/* 마우스 올리면 */
+.goal-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.18),
+    0 10px 25px rgba(79, 70, 229, 0.2);
+}
+
+/* 목표 제목 */
 .goal-box h2 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  color: #1e179e;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #1e3a8a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
+/* 리스트 */
 .goal-box ul {
-  padding-left: 22px;
+  list-style: none;
+  padding-left: 0;
 }
 
+/* 목표 항목 */
 .goal-box li {
-  font-size: 15px;
-  line-height: 1.9;
-  color: #444;
-  margin-bottom: 6px;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #374151;
 }
+
+/* 커스텀 체크 포인트 */
+.goal-box li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #4f46e5;
+  font-weight: 700;
+}
+
+/* intro 제목도 더 힘주기 */
+.intro h1 {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.intro p {
+  font-size: 15px;
+  margin-top: 6px;
+  color: #475569;
+}
+
 
 /* =========================
-   page3 : 라이즈 소희
+   위키 스타일
 ========================= */
-.sohee-main-img {
-  width: 190px;
-  display: block;
-  margin: 18px auto 6px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
-}
-
-.img-caption {
-  text-align: center;
-  font-size: 13px;
-  color: #777;
-  margin-bottom: 14px;
-}
-
-/* 위키 박스 */
-.wiki-box {
-  margin-top: 35px;
-}
-
 .wiki-box h2 {
   font-size: 18px;
   margin-bottom: 12px;
-  color: #1e179e;
+  color: #4f46e5;
   border-left: 4px solid #c7d2fe;
   padding-left: 10px;
 }
 
-/* 위키 테이블 */
 .wiki-table {
   width: 100%;
   border-collapse: collapse;
@@ -251,26 +435,8 @@ nav a.active {
 }
 
 .wiki-table th {
-  width: 110px;
   background: #f8fafc;
   font-weight: 600;
-  text-align: left;
-}
-
-.wiki-table img {
-  width: 140px;
-  display: block;
-  margin: 0 auto;
-}
-
-/* 특징 리스트 */
-.wiki-box ul {
-  padding-left: 18px;
-}
-
-.wiki-box li {
-  line-height: 1.8;
-  font-size: 14px;
 }
 
 /* =========================
@@ -279,19 +445,15 @@ nav a.active {
 .my-style {
   margin-top: 40px;
   padding: 22px;
-  background: #eff6ff;
-  border-radius: 16px;
+  background: #f5f7ff;
+  border-radius: 18px;
 }
 
 .my-style h3 {
   font-size: 17px;
-  color: #1e179e;
+  color: #4f46e5;
   margin-bottom: 12px;
   text-align: center;
-}
-
-.my-style ul {
-  padding-left: 18px;
 }
 
 .my-style li {
@@ -300,9 +462,8 @@ nav a.active {
 }
 
 .my-style a {
-  margin-left: 6px;
+  color: #4f46e5;
   font-size: 13px;
-  color: #1e179e;
   text-decoration: none;
 }
 
@@ -311,51 +472,73 @@ nav a.active {
 }
 
 /* =========================
-   📓 여행 일기장 스타일
+   🎧 노래 추천 (Melon 감성)
 ========================= */
 
-/* 일기 전체 */
-.diary {
-  font-family: 'Nanum Pen Script', cursive;
+.music-page {
+  max-width: 900px;   /* 기존보다 넓게 */
 }
 
-/* 줄노트 배경 */
-.diary-page {
-  background:
-    repeating-linear-gradient(
-      to bottom,
-      #ffffff,
-      #ffffff 28px,
-      #e5e7eb 29px
-    );
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: inset 0 0 0 1px #e5e7eb;
-}
-
-/* 여행 정보 */
-.diary-info {
+/* 노래 리스트 */
+.music-list {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  font-size: 15px;
-  margin-bottom: 18px;
-  color: #374151;
+  gap: 18px;
 }
 
-/* 날짜 */
-.diary-date {
-  font-size: 22px;
-  margin-bottom: 15px;
-  color: #1f2937;
+/* 노래 카드 */
+.music-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 18px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
 }
 
-/* 본문 */
-.diary-page p {
-  font-size: 18px;
-  line-height: 1.9;
-  margin-bottom: 14px;
+.music-card:hover {
+  transform: translateY(-3px);
+}
+
+/* 앨범 아트 */
+.music-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* 노래 정보 */
+.music-info h3 {
+  font-size: 17px;
+  margin-bottom: 4px;
   color: #111827;
+}
+
+.music-info .artist {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.music-info .comment {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+/* 듣기 버튼 */
+.music-info a {
+  font-size: 13px;
+  color: #10b981; /* 멜론 그린 */
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.music-info a:hover {
+  text-decoration: underline;
 }
 
 
@@ -366,5 +549,5 @@ nav a.active {
   text-align: center;
   padding: 20px;
   font-size: 13px;
-  color: #555;
+  color: #666;
 }
