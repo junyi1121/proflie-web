@@ -455,9 +455,32 @@ nav a.active {
   padding: 10px;
 }
 
+/* 테이블 헤더 */
 .wiki-table th {
   background: #f8fafc;
   font-weight: 600;
+  text-align: center;
+}
+
+/* 🔥 소희 사인 들어간 칸 */
+.wiki-table td.image-cell {
+  text-align: center;        /* 가로 가운데 */
+  vertical-align: middle;    /* 세로 가운데 */
+  padding: 14px;
+}
+
+/* 소희 사인 이미지 */
+.wiki-table td.image-cell img {
+  display: block;
+  margin: 0 auto 6px;        /* 가운데 + 아래 여백 */
+  max-width: 120px;
+}
+
+/* 캡션 */
+.wiki-table td.image-cell .img-caption {
+  font-size: 13px;
+  color: #6b7280;
+  text-align: center;
 }
 
 /* =========================
@@ -502,10 +525,11 @@ nav a.active {
 
 /* 노래 리스트 */
 .music-list {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ⬅️ 한 줄에 2개 */
+  gap: 20px;
 }
+
 
 /* 노래 카드 */
 .music-card {
@@ -561,6 +585,8 @@ nav a.active {
 .music-info a:hover {
   text-decoration: underline;
 }
+
+
 
 
 /* =========================
