@@ -18,68 +18,89 @@ body {
 }
 
 /* =========================
-   메인 베너
+   풀사이즈 D-DAY 히어로 배너
 ========================= */
-.banner {
-  position: relative;
-  height: 180px;
-  border-radius: 26px;
-  background: linear-gradient(
-    135deg,
-    #4f46e5,
-    #60a5fa
-  );
-  margin-bottom: 40px;
-  overflow: hidden;
+.dday-hero {
+  width: 100%;
+  height: 290px;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
   display: flex;
   align-items: center;
-  padding: 0 40px;
-  box-shadow: 0 20px 40px rgba(79,70,229,0.35);
+  justify-content: center;
+  margin-top: 65px;
+  margin-bottom: 10px; /* 고정 헤더 높이 */
 }
 
-/* 장식 원 */
-.banner::before,
-.banner::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.25;
+/* 가운데 콘텐츠 */
+.dday-content {
+  display: flex;
+  flex-direction: column;   /* 세로 정렬 */
+  align-items: center;      /* 가로 중앙 */
+  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
 
-.banner::before {
-  width: 200px;
-  height: 200px;
-  background: white;
-  top: -80px;
-  right: -60px;
-}
-
-.banner::after {
-  width: 140px;
-  height: 140px;
-  background: white;
-  bottom: -50px;
-  left: -40px;
-}
-
-/* 텍스트 */
-.banner-text {
-  position: relative;
-  z-index: 1;
-  color: white;
-}
-
-.banner-text h1 {
-  font-size: 30px;
-  font-weight: 900;
+/* Junyi's Birthday */
+.dday-content h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #4f46e5;
   margin-bottom: 6px;
-  letter-spacing: -0.5px;
 }
 
-.banner-text p {
-  font-size: 15px;
-  opacity: 0.9;
+/* D-숫자 */
+.dday-number {
+  font-size: 56px;
+  font-weight: 900;
+  color: #111827;
+  margin: 6px 0;
 }
+
+/* 축 생일 */
+.dday-sub {
+  font-size: 15px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   축하 영역
+========================= */
+.dday-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 버튼 */
+#celebrateBtn {
+  margin-top: 10px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 22px;
+  background: #4f46e5;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#celebrateBtn:hover {
+  background: #4338ca;
+}
+
+/* 감사 멘트 */
+#celebrateMsg {
+  display: none;
+  margin-top: 14px;
+  font-size: 15px;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+
 
 
 /* =========================
@@ -97,7 +118,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
   z-index: 1000;
 }
 
@@ -126,7 +147,7 @@ nav a.active {
 .container {
   max-width: 760px;
   background: linear-gradient(180deg, #ffffff, #f8faff);
-  margin: 120px auto 60px;
+  margin: 40px auto 60px;
   padding: 48px 42px;
   border-radius: 28px;
   box-shadow:
@@ -445,7 +466,7 @@ nav a.active {
 .my-style {
   margin-top: 40px;
   padding: 22px;
-  background: #f5f7ff;
+  background: #dbe1f6;
   border-radius: 18px;
 }
 
